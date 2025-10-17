@@ -22,6 +22,7 @@ class Settings:
     smtp_user: str = os.getenv("SMTP_USER", "")
     smtp_password: str = os.getenv("SMTP_PASSWORD", "")
     smtp_use_ssl: bool = os.getenv("SMTP_USE_SSL", "false").lower() in ("1", "true", "yes")
-    
+    smtp_host: str = os.getenv("SMTP_HOST", "")
+    mail_from: str = os.getenv("MAIL_FROM", "")
 
 settings = Settings()
